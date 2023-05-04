@@ -1,6 +1,6 @@
 // src/components/Sidebar.js
 import React, { useState } from 'react';
-import { Box, Button, VStack, useMediaQuery, Text, Accordion, AccordionButton, AccordionItem, Flex } from '@chakra-ui/react';
+import { Box, Button, VStack, useMediaQuery, Text, Flex } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -27,41 +27,54 @@ const Sidebar = () => {
         w={getWidth()}
         h="100vh"
         p={0}
-        bgColor={'gui.notblack'}
+        bgColor={'gui.black'}
         zIndex={10}
         overflowY="auto"
-        transition="width 0.3s"
+        transition={'all 0.1s ease-in-out'}
+        
     >
-    <Box bgColor={'gui.green'} w={'65px'} p={'0'} m={0}>
+    <Box maxW={'65px'} bgColor={'gui.black'} p={'0'} m={0} zIndex={20} >
       <Button 
-        position="fixed" 
         w={'48px'} 
         h={'48px'} 
-        top={2} 
-        left={2} 
-        zIndex={20} 
+        m={2}
         onClick={toggleSidebar}>
             <FontAwesomeIcon icon={faBars} />
       </Button>
         
       </Box>
       <Box 
-        bgColor={'red'} 
-        display={isOpen ? 'block' : 'none'}
+        h={"100%"}
+        w={'100%'}
       >
-      <VStack alignItems={'start'}  m={'0'}>
+      <VStack m={'0'} 
+      alignItems={'start'}
+      opacity={isOpen ? '1' : '0'}
+      transform={isOpen ? 'translateX(0)' : 'translateX(-100px)'}
+            transition={'all 0.3s ease-in'}
+      >
 
-      <Accordion pl={'48px'}
-        pt={'2px'}
-        opacity={isOpen ? '1' : '0'}
-        transform={isOpen ? 'translateX(0)' : 'translateX(-40px)'}
-        transition={'all 0.2s ease-in-out'}>
-      <AccordionItem border={'0'}>
-        <AccordionButton p={0}>
-        <Text pl={4} textStyle="h1">Home</Text>
-        </AccordionButton>
-    </AccordionItem>
-      </Accordion>
+            <Box mt={"10px"} 
+            opacity={isOpen ? '1' : '0'}
+            transform={isOpen ? 'translateX(0)' : 'translateX(-50px)'}
+            transition={isOpen ? 'all 0.3s ease-in' : ''}>
+                <Text textStyle="h1">
+                    Home
+                </Text>
+            </Box>
+
+            <Box mt={"10px"} 
+            opacity={isOpen ? '1' : '0'}
+            transform={isOpen ? 'translateX(0)' : 'translateX(-50px)'}
+            transition={isOpen ? 'all 0.3s ease-in .15s' : ''}>
+                <Text textStyle="h1">
+                    Introdução
+                </Text>
+            </Box>
+            
+      
+
+
       </VStack>
       </Box>
     </Flex>
