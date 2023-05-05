@@ -5,30 +5,23 @@ import {
   Box,
   Text,
   Button,
-  Center
+  Center,
 } from '@chakra-ui/react';
 import VideoPlayer from '../components/VideoPlayer';
 
 const Home = () => {
 
   return (
-    <Box as="main" h="100vh" py={2} pr={4} color={'gui.seasalt'} textStyle="body" >
+    <Center as="main" h="100vh" p={4} color={'gui.seasalt'} textStyle="body" flexDirection="column">
       <Text textStyle={'h0'}>Seja um Mestre do  <Text as='span' color={'gui.green'}>Movimento</Text></Text>
       <Text>
         Aprenda as técnicas avançadas de movimentação para dominar o Apex Legends.
       </Text>
-      <Center>
-      </Center>
-      <Box  borderRadius={16}>
-        <Box>
-          <VideoPlayer url="https://youtu.be/_o8hMZaUrwo" autoPlay />
-        </Box>
+      <Box width="100%" maxW="1280px" borderRadius={16}>
+        <VideoPlayer url="https://youtu.be/_o8hMZaUrwo" autoPlay />
       </Box>
-
-      <Center>
-        <Button variant="guiGreen">Aprender agora!</Button>
-      </Center>
-    </Box>
+      <Button variant="guiGreen">Aprender agora!</Button>
+    </Center>
   )
 }
 

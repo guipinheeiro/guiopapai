@@ -1,3 +1,4 @@
+// src/components/VideoPlayer.js
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import { Checkbox, Box, Center } from '@chakra-ui/react';
@@ -10,16 +11,13 @@ const VideoPlayer = ({ url, autoPlay }) => {
   };
 
   return (
-    <>
-    <Box mb={1} position="relative" width="100%" paddingTop="52%">
-      <Box 
-      position="absolute"
-        top={0}
-        left={0}
-        width="100%"
-        height="100%"
+    <Box width="100%">
+      <Box
+        position="relative"
+        paddingTop="56.25%" // 16:9 aspect ratio
         borderRadius={16}
-        overflow="hidden" >
+        overflow="hidden"
+      >
         <ReactPlayer
           url={url}
           playing={autoPlay}
@@ -32,18 +30,15 @@ const VideoPlayer = ({ url, autoPlay }) => {
             position: 'absolute',
             top: 0,
             left: 0,
-            borderRadius: '50px',
           }}
         />
-      </Box>
       </Box>
       <Center>
         <Checkbox mb={4} isChecked={isMuted} onChange={handleMuteToggle}>
           Mudo ativado
         </Checkbox>
       </Center>
-    
-    </>
+    </Box>
   );
 };
 
