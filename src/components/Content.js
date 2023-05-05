@@ -6,19 +6,21 @@ import Home from '../pages/Home';
 
 
 const Content = ({ isOpen }) => { 
-  const marginLeft = isOpen ? '360px' : '65px';
   const [isMobile] = useMediaQuery('(max-width: 768px)');
+  const marginLeft = isMobile ? (isOpen ? '0' : '65px') : (isOpen ? '360px' : '65px');
+  
 
   return (
     <Box
-    transition="all 0.1s ease-in-out"
     as="main"
     ml={marginLeft}
-    h="100%"
+    h="100vh"
+    position={isMobile ? (isOpen ? 'fixed' : '') : ''}
     overflow={isMobile ? (isOpen ? "hidden" : "auto") : "auto"}
-  >
-    <Home />
-  </Box>
+    css={{ transitionProperty: 'none' }}
+    >
+      <Home />
+    </Box>
   );
 };
 

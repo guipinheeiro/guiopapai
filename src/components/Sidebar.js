@@ -46,7 +46,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
   return (
     <Flex
-      position={isMobile ? 'fixed' : 'fixed'}
+      position={'fixed'}
       as="aside"
       w={getWidth()}
       h="100vh"
@@ -54,7 +54,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       color={'gui.seasalt'}
       bgColor={'gui.notblack'}
       zIndex={10}
-      transition={'all 0.1s ease-in-out'}
+      
     >
      <Box w={'65px'} bgColor={'gui.notblack'} p={'0'} m={0} zIndex={20}>
   <Button
