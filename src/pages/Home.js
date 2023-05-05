@@ -23,10 +23,10 @@ const Home = () => {
       </Text>
       <Center >
         <Content borderRadius={4}>
-          <VideoPlayer url="https://youtu.be/lXA6mdenSWA" autoPlay />
+          
         </Content>
       </Center>
-
+      <VideoPlayer url="" autoPlay />
       <Center>
         
         <Button variant="guiGreen">Aprender agora!</Button>

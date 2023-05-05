@@ -26,7 +26,6 @@ const theme = extendTheme({
       letterSpacing: '0em',
       textAlign: 'left',
       textTransform: 'uppercase',
-
     },
     h1: {
       fontFamily: 'Roboto Flex',

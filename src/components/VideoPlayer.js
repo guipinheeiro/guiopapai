@@ -17,7 +17,6 @@ const VideoPlayer = ({ url, autoPlay }) => {
         loop
         muted={isMuted}
         volume={isMuted ? 0 : 0.5}
-        style={{ maxWidth: '100%' }}
       />
       <Center >
           <Checkbox isChecked={isMuted} onChange={handleMuteToggle}>
