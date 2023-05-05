@@ -178,7 +178,16 @@ const Sidebar = () => {
                   Air Strafe
                 </Text>
                 <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
+                  Wall Jump
+                </Text>
+                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
+                  Tap Strafe
+                </Text>
+                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
                   Mantle Jump
+                </Text>
+                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
+                  Superglide
                 </Text>
               </AccordionPanel>             
             </AccordionItem>
