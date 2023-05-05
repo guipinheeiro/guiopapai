@@ -18,6 +18,16 @@ const theme = extendTheme({
     },
   },
   textStyles: {
+    h0: {
+      fontFamily: 'Roboto Flex',
+      fontSize: '84px',
+      fontWeight: '634',
+      lineHeight: '64px',
+      letterSpacing: '0em',
+      textAlign: 'left',
+      textTransform: 'uppercase',
+
+    },
     h1: {
       fontFamily: 'Roboto Flex',
       fontSize: '64px',
@@ -25,8 +35,8 @@ const theme = extendTheme({
       lineHeight: '48px',
       letterSpacing: '0em',
       textAlign: 'left',
-      textTransform:'uppercase',
- 
+      textTransform: 'uppercase',
+
     },
     h2: {
       fontFamily: 'Roboto Flex ',
@@ -35,7 +45,7 @@ const theme = extendTheme({
       lineHeight: '48px',
       letterSpacing: '0em',
       textAlign: 'left',
-      textTransform:'uppercase',
+      textTransform: 'uppercase',
     },
     h3: {
       fontFamily: 'Roboto Flex ',
@@ -44,7 +54,7 @@ const theme = extendTheme({
       lineHeight: '33px',
       letterSpacing: '0em',
       textAlign: 'left',
-      textTransform:'uppercase',
+      textTransform: 'uppercase',
     },
     h4: {
       fontFamily: 'Roboto Flex ',
@@ -53,7 +63,7 @@ const theme = extendTheme({
       lineHeight: '48px',
       letterSpacing: '0em',
       textAlign: 'left',
-      textTransform:'uppercase',
+      textTransform: 'uppercase',
     },
     h4menu: {
       fontFamily: 'Montserrat',
@@ -70,6 +80,38 @@ const theme = extendTheme({
       lineHeight: '21px',
       letterSpacing: '0em',
       textAlign: 'left',
+    },
+  },
+  components: {
+    Button: {
+      baseStyle: {
+        fontWeight: '550',
+        textTransform:'uppercase',
+        borderRadius: 'xl',
+      },
+      variants: {
+        guiGreen: (props) => {
+          const mycolor = {
+            dark: 'gui.notblack',
+            light:'gui.green'
+          }
+          const bgColor = props.colorMode === 'dark' ? mycolor.light : mycolor.light;
+          const textColor = props.colorMode === 'dark' ? mycolor.dark: mycolor.dark;
+          const hoverBgColor = props.colorMode === 'dark' ? mycolor.dark : mycolor.dark;
+          const hoverColor = mycolor.light;
+
+          return {
+            bg: bgColor,
+            color: textColor,
+            _hover: {
+              bg: hoverBgColor,
+              color: hoverColor,
+              borderColor: hoverColor,
+              borderWidth: '2px',
+            },
+          };
+        },
+      },
     },
   },
 });

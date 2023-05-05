@@ -1,21 +1,38 @@
-// src/components/Sidebar.js
+/// src/components/Sidebar.js
 import React, { useState } from 'react';
 import {
   Box,
   Button,
   useMediaQuery,
-  Text,
   Flex,
   Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
 } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { keyframes } from '@emotion/react';
+import ScrollingText from './Sidebar/ScrollingText';
+import SidebarItem from './Sidebar/SidebarItem';
 
+const menuItems = [
+  { title: 'Home', isAccordion: false, children: [] },
+  { title: 'Introdução', isAccordion: false, children: [] },
+  {
+    title: 'Fundamentos',
+    isAccordion: true,
+    children: ['Configurando', 'Posicionamento', 'Strafe'],
+  },
+  {
+    title: 'Movimentos',
+    isAccordion: true,
+    children: [
+      'Slide Jump',
+      'Air Strafe',
+      'Wall Jump',
+      'Tap Strafe',
+      'Mantle Jump',
+      'Superglide',
+    ],
+  },
+];
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
@@ -34,15 +51,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     }
     return isOpen ? '360px' : '65px';
   };
-  
-  const scrollingTextAnimation = keyframes`
-  0% {
-    transform: rotate(180deg) translateY(42%);
-  }
-  100% {
-    transform: rotate(180deg) translateY(0%);
-  }
-`;
 
   return (
     <Flex
@@ -54,42 +62,29 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       color={'gui.seasalt'}
       bgColor={'gui.notblack'}
       zIndex={10}
-      
     >
-     <Box w={'65px'} bgColor={'gui.notblack'} p={'0'} m={0} zIndex={20}>
-  <Button
-    bgColor={'gui.maisblack'}
-    w={'48px'}
-    h={'48px'}
-    top={2}
-    left={2}
-    zIndex={1}
-    onClick={toggleSidebar}
-    _hover={{
-      bg: 'gui.maisblack',
-      borderColor: 'gui.meioblack',
-      borderWidth: '1px',
-    }}
-  >
-    <FontAwesomeIcon color={'gui.seasalt'} icon={faBars} />
-  </Button>
-  <Box
-    ml={2}
-    zIndex={'-1'}
-    opacity={'.2'}
-    textStyle={'h4'}
-    
-    css={{
-      writingMode: 'vertical-lr',
-      whiteSpace: 'nowrap',
-      textOrientation: 'mixed',
-      transform: 'rotate(180deg)',
-      animation: `${scrollingTextAnimation} 8s linear infinite`,
-    }}
-  >
-    APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | 
-  </Box>
-</Box>
+      {/* Rest of the sidebar */}
+
+      <Box w={'65px'} bgColor={'gui.notblack'} p={'0'} m={0} zIndex={20}>
+        <Button
+          bgColor={'gui.maisblack'}
+          w={'48px'}
+          h={'48px'}
+          top={2}
+          left={2}
+          zIndex={1}
+          onClick={toggleSidebar}
+          _hover={{
+            bg: 'gui.maisblack',
+            borderColor: 'gui.meioblack',
+            borderWidth: '1px',
+          }}
+        >
+          <FontAwesomeIcon color={'gui.seasalt'} icon={faBars} />
+        </Button>
+        <ScrollingText text='APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | ' />
+
+      </Box>
 
       <Box h={'100%'} w={'100%'} ml={2}>
         <Accordion
@@ -100,101 +95,17 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           index={expandedItem}
           onChange={(index) => setExpandedItem(index)}
           allowToggle
-          
         >
-        
-        <AccordionItem border={'0'}>
-          <Box 
-            mt={"10px"}
-            opacity={isOpen ? '1' : '0'}
-            transform={isOpen ? 'translateX(0)' : 'translateX(-50px)'}
-            transition={isOpen ? 'transform 0.3s ease-in .05s, opacity 0.3s ease-in .05s' : 'all 0s'}
-            >
-              <Text textStyle="h1" _hover={{color: 'gui.green'}}>
-                  Home
-              </Text>
-          </Box>
-            </AccordionItem>
-
-            <AccordionItem mt={'90px'} mb={"20px"} border={'0'}>
-              <Box
-              opacity={isOpen ? '1' : '0'}
-              transform={isOpen ? 'translateX(0)' : 'translateX(-50px)'}
-              transition={isOpen ? 'transform 0.3s ease-in .05s, opacity 0.3s ease-in .05s' : 'all 0s'}>
-              
-                    <Text textStyle="h1" _hover={{color: 'gui.green'}} >
-                      Introdução
-                    </Text>
-              
-              </Box>
-            </AccordionItem>
-
-            <AccordionItem mb={"4px"} border={'0'}>
-              <AccordionButton
-              _expanded={{color:'gui.green'}}
-              p={0}
-              opacity={isOpen ? '1' : '0'}
-              transform={isOpen ? 'translateX(0)' : 'translateX(-50px)'}
-              transition={isOpen ? 'transform 0.3s ease-in .1s, opacity 0.3s ease-in .1s' : 'all 0s'}>
-              
-                    <Text textStyle="h1" _hover={{color: 'gui.green'}} >
-                      Fundamentos
-                    </Text>
-                    <AccordionIcon />
-              </AccordionButton>
-              <AccordionPanel>
-
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Configurando
-                </Text>
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Posicionamento
-                </Text>
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Strafe
-                </Text>
-                
-
-              </AccordionPanel>             
-            </AccordionItem>
-            <AccordionItem mb={'4px'} border={'0'}>
-              <AccordionButton
-              _expanded={{color:'gui.green'}}
-              p={0}
-              opacity={isOpen ? '1' : '0'}
-              transform={isOpen ? 'translateX(0)' : 'translateX(-50px)'}
-              transition={isOpen ? 'transform 0.3s ease-in .15s, opacity 0.3s ease-in .15s' : 'all 0s'}>
-              
-                    <Text textStyle="h1" _hover={{color: 'gui.green'}}>
-                      Movimentos
-                    </Text><AccordionIcon />
-              
-              </AccordionButton>
-              <AccordionPanel pl={8} pt={0} m={0}>
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Slide Jump
-                </Text>
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Air Strafe
-                </Text>
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Wall Jump
-                </Text>
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Tap Strafe
-                </Text>
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Mantle Jump
-                </Text>
-                <Text mb={0} textStyle="h4menu" _hover={{color: 'gui.green'}}>
-                  Superglide
-                </Text>
-              </AccordionPanel>             
-            </AccordionItem>
-      
-
-
-      </Accordion>
+          {menuItems.map((item, index) => (
+            <SidebarItem
+              key={index}
+              item={item}
+              isOpen={isOpen}
+              isHome={index === 0}
+              isSecond={index === 1}
+            />
+          ))}
+        </Accordion>
       </Box>
     </Flex>
   );
