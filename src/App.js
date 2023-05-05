@@ -2,17 +2,18 @@
 import React from 'react';
 import Sidebar from './components/Sidebar';
 import Content from './components/Content';
+import './App.css'
 import {
-  Flex
+  Grid
 } from '@chakra-ui/react';
 
 
 const App = () => {
   return (
-    <Flex bg="gui.notblack" h={'100%'}>
+    <Grid templateColumns="auto 1fr" h="100vh" bgColor={'gui.notblack'}>
       <Sidebar />
-      <Content />
-    </Flex>
+      <Content  />
+    </Grid>
   );
 };
 

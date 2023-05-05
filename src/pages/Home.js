@@ -6,11 +6,11 @@ import { Box,
 
 const Home = () => {
   return (
-    <Box as="main" h="100vh" p={4}>
-        
+    <Box as="main" h="100vh" py={2} pr={4} color={'gui.seasalt'} textStyle="body" >
+        <Text textStyle={'h2'}>SEJA <Text as='span' color={'gui.green'}>BEM-VINDO</Text></Text>
         <Text>Fala, Nerdolas!</Text>
 
-        <Text>
+        <Text >
           E aí, quer melhorar sua jogatina no nosso adorado Apéquinho? Seja para aprender aquele movimento incrível que você viu alguém executar ou simplesmente para dar um up no seu estilo de jogo, você chegou ao lugar certo! Fique à vontade para explorar o site, mas não deixe de dar uma espiadinha na seção PRIMEIROS PASSOS em Fundamentos antes de sair por aí como um ninja. 🥷
         </Text>
 

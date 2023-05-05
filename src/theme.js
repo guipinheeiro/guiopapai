@@ -13,6 +13,7 @@ const theme = extendTheme({
       notblack: "rgb(19, 19, 19)",
       twitch: "rgb(118, 29, 242)",
       black: "rgb(0, 0, 0)",
+      maisblack: "rgb(45, 45, 45)",
       meioblack: "rgb(128, 128, 128)"
     },
   },
@@ -54,10 +55,18 @@ const theme = extendTheme({
       textAlign: 'left',
       textTransform:'uppercase',
     },
+    h4menu: {
+      fontFamily: 'Montserrat',
+      fontSize: '32px',
+      fontWeight: '500',
+      lineHeight: '48px',
+      letterSpacing: '0em',
+      textAlign: 'left',
+    },
     body: {
-      fontFamily: 'Roboto Flex ',
+      fontFamily: 'Montserrat',
       fontSize: '18px',
-      fontWeight: '400',
+      fontWeight: '300',
       lineHeight: '21px',
       letterSpacing: '0em',
       textAlign: 'left',
