@@ -17,9 +17,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { keyframes } from '@emotion/react';
 
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
-  const [isOpen, setIsOpen] = useState(true);
   const [expandedItem, setExpandedItem] = useState(null);
 
   const toggleSidebar = () => {
@@ -47,7 +46,7 @@ const Sidebar = () => {
 
   return (
     <Flex
-      position={isMobile ? 'fixed' : ''}
+      position={isMobile ? 'fixed' : 'fixed'}
       as="aside"
       w={getWidth()}
       h="100vh"
@@ -79,6 +78,7 @@ const Sidebar = () => {
     zIndex={'-1'}
     opacity={'.2'}
     textStyle={'h4'}
+    
     css={{
       writingMode: 'vertical-lr',
       whiteSpace: 'nowrap',
