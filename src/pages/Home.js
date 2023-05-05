@@ -8,8 +8,6 @@ import {
   Center
 } from '@chakra-ui/react';
 import VideoPlayer from '../components/VideoPlayer';
-import Content from '../components/Content';
-
 
 
 
@@ -22,9 +20,9 @@ const Home = () => {
         Aprenda as técnicas avançadas de movimentação para dominar o Apex Legends.
       </Text>
       <Center >
-        <Content borderRadius={4}>
+        
           
-        </Content>
+        
       </Center>
       <VideoPlayer url="" autoPlay />
       <Center>

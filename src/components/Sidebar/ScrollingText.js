@@ -6,10 +6,10 @@ import { Box } from '@chakra-ui/react';
 const ScrollingText = ({ text }) => {
   const scrollingTextAnimation = keyframes`
     0% {
-      transform: rotate(-180deg) translateY(0%);
+      transform: rotate(180deg) translateY(0%);
     }
     100% {
-      transform: rotate(-180deg) translateY(42%);
+      transform: rotate(180deg) translateY(42%);
     }
   `;
 
