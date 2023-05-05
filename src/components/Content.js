@@ -18,6 +18,7 @@ const Content = ({ isOpen }) => {
     position={isMobile ? (isOpen ? 'fixed' : '') : ''}
     overflow={isMobile ? (isOpen ? "hidden" : "auto") : "auto"}
     css={{ transitionProperty: 'none' }}
+    
     >
       <Home />
     </Box>
