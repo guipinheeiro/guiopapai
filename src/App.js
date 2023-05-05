@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
-import Content from './components/Content';
+import ContentArea from './components/ContentArea';
 import './App.css';
 import { Grid, useMediaQuery } from '@chakra-ui/react';
 
@@ -47,7 +47,7 @@ const App = () => {
         transition="opacity .5s ease-in" // Add CSS transition for opacity
       >
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Content isOpen={isOpen} isLoading={isLoading} />
+        <ContentArea isOpen={isOpen} isLoading={isLoading} />
       </Grid>
     </div>
   );
