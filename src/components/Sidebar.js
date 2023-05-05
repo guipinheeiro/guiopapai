@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { css, keyframes } from '@emotion/react';
+import { keyframes } from '@emotion/react';
 
 
 const Sidebar = () => {
