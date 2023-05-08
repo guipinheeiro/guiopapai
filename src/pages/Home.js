@@ -8,6 +8,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 import VideoPlayer from '../components/VideoPlayer';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -20,7 +21,7 @@ const Home = () => {
       <Box width="100%" maxW="1280px" borderRadius={16}>
         <VideoPlayer url="https://youtu.be/_o8hMZaUrwo" autoPlay />
       </Box>
-      <Button variant="guiGreen">Aprender agora!</Button>
+      <Link to={'./intro'}><Button variant="guiGreen">Aprender agora!</Button></Link>
     </Center>
   )
 }
