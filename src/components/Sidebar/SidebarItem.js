@@ -9,7 +9,9 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
-const SidebarItem = ({ item, isOpen, isHome, isSecond, isMobile, setIsOpen }) => {
+const SidebarItem = ({ item, index, isOpen, isMobile, setIsOpen }) => {
+  const isHome = index === 0;
+  const isSecond = index === 1;
   const marginTop = isHome ? '10px' : isSecond ? '90px' : '0';
   const marginBottom = isSecond ? '20px' : '4px';
 

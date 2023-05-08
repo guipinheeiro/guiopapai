@@ -104,14 +104,15 @@ const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
           allowToggle
         >
           {menuItems.map((item, index) => (
-          <SidebarItem
-            key={index}
-            item={item}
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-            isMobile={isMobile}
-          />
-            ))}
+            <SidebarItem
+              key={index}
+              item={item}
+              index={index}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+              isMobile={isMobile}
+            />
+))}
         </Accordion>
       </Box>
     </Flex>
