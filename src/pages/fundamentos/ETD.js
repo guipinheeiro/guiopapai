@@ -6,6 +6,7 @@ import {
   ListItem,
   Center,
 } from '@chakra-ui/react';
+import VideoPlayer from '../../components/VideoPlayer';
 
 
 const ETD = () => {
@@ -31,7 +32,7 @@ const ETD = () => {
         lá:
       </Text>
       <UnorderedList mb={4}>
-        <ListItem>
+        <ListItem mb={4}>
           Fuja da monotonia: Evite movimentos repetitivos e padrões óbvios,
           como correr em linha reta ou pular sem parar. Sabe aquelas vezes que
           você fica preso no loop de pulo e acha que tá abafando? Não tá, não.
@@ -58,22 +59,24 @@ const ETD = () => {
         cama. Tô falando de usar o cenário a seu favor pra evitar danos.
       </Text>
       <UnorderedList mb={4}>
-        <ListItem>
+        <ListItem mb={4}>
           A arte de se esconder: Use as barreiras, muros, árvores e tudo mais
           que estiver no ambiente pra se proteger dos tiros. Mas não fica
           parado igual uma estátua, hein? Lembrese do movimento imprevisível!
 </ListItem>
+
+<Center>
+
+<VideoPlayer url="https://www.youtube.com/watch?v=hC8q7H3fwwE" />
+
+</Center>
 <ListItem>
 Olho na mira: Cuidado pra não expor demais seu personagem enquanto
 mira nos inimigos. Aquela metadinha de corpo pra fora do esconderijo
 pode ser fatal.
 </ListItem>
 </UnorderedList>
-<Center mb={4}>
-<Box borderRadius={16}>
-{/* // Replace with the actual video URL */}
-</Box>
-</Center>
+
 <Text>
 Então, é isso aí, pessoal! Com essas dicas, você vai evitar danos
 desnecessários e deixar os inimigos comendo poeira. Agora corre lá e
@@ -81,6 +84,8 @@ mostra pra eles como se faz! E não esquece de compartilhar suas vitórias
 com a gente, hein? Boa sorte!
 </Text>
 </Box>
+
+
 
 );
 };
