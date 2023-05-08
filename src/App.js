@@ -4,11 +4,19 @@ import ContentArea from './components/ContentArea';
 import './App.css';
 import { Grid, useMediaQuery } from '@chakra-ui/react';
 
+// Importação do conteúdo
+import { BrowserRouter as Router} from 'react-router-dom';
+
+
+
+
+
+
 const App = () => {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
   const [isOpen, setIsOpen] = useState(!isMobile);
   const [isLoading, setIsLoading] = useState(true);
-  const [isLoaded, setIsLoaded] = useState(false); // Add isLoaded state
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsOpen(!isMobile);
@@ -43,11 +51,13 @@ const App = () => {
         h="100vh"
         bgColor="gui.notblack"
         position="relative"
-        opacity={isLoaded ? 1 : 0} // Add opacity based on isLoaded state
-        transition="opacity .5s ease-in" // Add CSS transition for opacity
+        opacity={isLoaded ? 1 : 0}
+        transition="opacity .5s ease-in"
       >
-        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-        <ContentArea isOpen={isOpen} isLoading={isLoading} />
+        <Router>
+          <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} isMobile={isMobile} />
+          <ContentArea isOpen={isOpen} isLoading={isLoading} />
+        </Router>
       </Grid>
     </div>
   );

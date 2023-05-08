@@ -1,4 +1,3 @@
-// src/components/Sidebar/SidebarItem.js
 import React from 'react';
 import {
   Box,
@@ -8,10 +7,17 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
-const SidebarItem = ({ item, isOpen, isHome, isSecond }) => {
+const SidebarItem = ({ item, isOpen, isHome, isSecond, isMobile, setIsOpen }) => {
   const marginTop = isHome ? '10px' : isSecond ? '90px' : '0';
   const marginBottom = isSecond ? '20px' : '4px';
+
+  const handleChildItemClick = () => {
+    if (isMobile) {
+      setIsOpen(false);
+    }
+  };
 
   if (!item.isAccordion) {
     return (
@@ -25,9 +31,11 @@ const SidebarItem = ({ item, isOpen, isHome, isSecond }) => {
               : 'all 0s'
           }
         >
-          <Text textStyle="h1" _hover={{ color: 'gui.green' }}>
-            {item.title}
-          </Text>
+          <Link to={item.path} onClick={handleChildItemClick}>
+            <Text textStyle="h1" _hover={{ color: 'gui.green' }}>
+              {item.title}
+            </Text>
+          </Link>
         </Box>
       </AccordionItem>
     );
@@ -53,14 +61,11 @@ const SidebarItem = ({ item, isOpen, isHome, isSecond }) => {
       </AccordionButton>
       <AccordionPanel pl={8} pt={0} m={0}>
         {item.children.map((child, index) => (
-          <Text
-            key={index}
-            mb={0}
-            textStyle="h4menu"
-            _hover={{ color: 'gui.green' }}
-          >
-            {child}
-          </Text>
+          <Link key={index} to={child.path} onClick={handleChildItemClick}>
+            <Text mb={0} textStyle="h4menu" _hover={{ color: 'gui.green' }}>
+              {child.title}
+            </Text>
+          </Link>
         ))}
       </AccordionPanel>
     </AccordionItem>

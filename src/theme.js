@@ -6,8 +6,8 @@ const theme = extendTheme({
     gui: {
       raisinblack: "rgb(38, 37, 37)",
       seasalt: "rgb(249, 249, 249)",
-      tropicalindigo: "rgb(166, 149, 255)",
-      darkorange: "rgb(255, 153, 0)",
+      purp: "rgb(166, 149, 255)",
+      orange: "rgb(255, 153, 0)",
       green: "rgb(144, 255, 57)",
       bloodred: "rgb(255, 33, 60)",
       notblack: "rgb(19, 19, 19)",

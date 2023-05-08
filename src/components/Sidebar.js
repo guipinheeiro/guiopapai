@@ -1,9 +1,8 @@
-/// src/components/Sidebar.js
+// src/components/Sidebar.js
 import React, { useState } from 'react';
 import {
   Box,
   Button,
-  useMediaQuery,
   Flex,
   Accordion,
 } from '@chakra-ui/react';
@@ -13,29 +12,37 @@ import ScrollingText from './Sidebar/ScrollingText';
 import SidebarItem from './Sidebar/SidebarItem';
 
 const menuItems = [
-  { title: 'Home', isAccordion: false, children: [] },
-  { title: 'Introdução', isAccordion: false, children: [] },
+  { title: 'Home', isAccordion: false, children: [], path: '/' },
+  { title: 'Introdução', isAccordion: false, children: [], path: '/intro' },
   {
     title: 'Fundamentos',
     isAccordion: true,
-    children: ['Configurando', 'Posicionamento', 'Strafe'],
+    children: [
+      { title: 'Configurando', path: '/configurando' },
+      { title: 'ETD', path: '/etd' },
+      { title: 'R5Reloaded', path: '/r5reloaded' },
+      { title: 'Posicionamento', path: '/posicionamento' },
+      { title: 'Strafe', path: '/strafe' },
+    ],
   },
   {
     title: 'Movimentos',
     isAccordion: true,
     children: [
-      'Slide Jump',
-      'Air Strafe',
-      'Wall Jump',
-      'Tap Strafe',
-      'Mantle Jump',
-      'Superglide',
+      { title: 'Slide Jump', path: '/slide-jump' },
+      { title: 'Air Strafe', path: '/air-strafe' },
+      { title: 'Wall Jump', path: '/wall-jump' },
+      { title: 'Tap Strafe', path: '/tap-strafe' },
+      { title: 'Mantle Jump', path: '/mantle-jump' },
+      { title: 'Superglide', path: '/superglide' },
     ],
   },
 ];
 
-const Sidebar = ({ isOpen, setIsOpen }) => {
-  const [isMobile] = useMediaQuery('(max-width: 768px)');
+
+
+const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
+  
   const [expandedItem, setExpandedItem] = useState(null);
 
   const toggleSidebar = () => {
@@ -97,14 +104,14 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           allowToggle
         >
           {menuItems.map((item, index) => (
-            <SidebarItem
-              key={index}
-              item={item}
-              isOpen={isOpen}
-              isHome={index === 0}
-              isSecond={index === 1}
-            />
-          ))}
+          <SidebarItem
+            key={index}
+            item={item}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            isMobile={isMobile}
+          />
+            ))}
         </Accordion>
       </Box>
     </Flex>
