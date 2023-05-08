@@ -16,7 +16,7 @@ const Intro = () => {
       </Text>
 
       <Text>
-        Criei este site para compartilhar o que sei sobre movimentação no Apex Legends, trazendo dicas e tutoriais. Só um lembrete: Eu não sou pró-player!. O que você lê aqui pode não ser 100% correto, e queremos manter um debate saudável. Por isso, entre no meu Discord ou grupo de Whatsapp para trocar ideias comigo e outros fãs dos 'movimentamentos' e, assim, aprimorarmos esse conteúdo juntos.
+        Criei este site para compartilhar o que sei sobre movimentação no Apex Legends, trazendo dicas e tutoriais. Só um lembrete: <Text as={'span'} backgroundColor={'orange'} color={'gui.raisinblack'} fontWeight={'bold'}>Eu não sou pró-player!</Text> O que você lê aqui pode não ser 100% correto, e queremos manter um debate saudável. Por isso, entre no meu Discord ou grupo de Whatsapp para trocar ideias comigo e outros fãs dos 'movimentamentos' e, assim, aprimorarmos esse conteúdo juntos.
       </Text>
 
       <Text>

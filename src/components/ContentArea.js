@@ -13,14 +13,16 @@ const ContentArea = ({ isOpen }) => {
   const marginLeft = isMobile ? (isOpen ? '0' : '65px') : (isOpen ? '360px' : '65px');
 
   return (
-    <Center>
+    <Center width={isMobile ? '100vw': ''} h="100vh">
       <Box
         as="main"
         ml={marginLeft}
         h="100vh"
+        maxWidth={isMobile ? '': '700px'}
         position={isMobile ? (isOpen ? 'fixed' : '') : ''}
         overflow={isMobile ? (isOpen ? "hidden" : "auto") : "auto"}
         css={{ transitionProperty: 'none' }}
+        
       >
         <Routes>
           <Route path="/" element={<Home />} />

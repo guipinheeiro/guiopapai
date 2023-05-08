@@ -66,9 +66,9 @@ const theme = extendTheme({
     },
     h4menu: {
       fontFamily: 'Montserrat',
-      fontSize: '32px',
+      fontSize: '24px',
       fontWeight: '500',
-      lineHeight: '48px',
+      lineHeight: '36px',
       letterSpacing: '0em',
       textAlign: 'left',
     },
