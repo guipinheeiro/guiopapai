@@ -5,8 +5,10 @@ import {
   Button,
   Flex,
   Accordion,
+  Link
 } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faWhatsapp, faTiktok, faTwitch, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import ScrollingText from './Sidebar/ScrollingText';
 import SidebarItem from './Sidebar/SidebarItem';
@@ -39,10 +41,8 @@ const menuItems = [
   },
 ];
 
-
-
 const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
-  
+
   const [expandedItem, setExpandedItem] = useState(null);
 
   const toggleSidebar = () => {
@@ -89,6 +89,99 @@ const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
         >
           <FontAwesomeIcon color={'gui.seasalt'} icon={faBars} />
         </Button>
+
+        
+        
+        <Link href="https://discord.com/invite/UGT4WyuYta" isExternal>
+        <Button
+          bgColor={'gui.maisblack'}
+          w={'48px'}
+          h={'48px'}
+          top={24}
+          left={2}
+          zIndex={1}
+          _hover={{
+            bg: 'gui.maisblack',
+            borderColor: 'gui.meioblack',
+            borderWidth: '1px',
+          }}
+        >
+          <FontAwesomeIcon color={'gui.seasalt'} icon={faDiscord} />
+        </Button>
+      </Link>
+
+      <Link href="https://chat.whatsapp.com/JqHeWi9nvnCGOhgYJt1lfZ" isExternal>
+        <Button
+          bgColor={'gui.maisblack'}
+          w={'48px'}
+          h={'48px'}
+          top={28}
+          left={2}
+          zIndex={1}
+          _hover={{
+            bg: 'gui.maisblack',
+            borderColor: 'gui.meioblack',
+            borderWidth: '1px',
+          }}
+        >
+          <FontAwesomeIcon color={'gui.seasalt'} icon={faWhatsapp} />
+        </Button>
+      </Link>
+      
+
+      <Link href="https://www.youtube.com/@guiopapai" isExternal>
+        <Button
+          bgColor={'gui.maisblack'}
+          w={'48px'}
+          h={'48px'}
+          top={32}
+          left={2}
+          zIndex={1}
+          _hover={{
+            bg: 'gui.maisblack',
+            borderColor: 'gui.meioblack',
+            borderWidth: '1px',
+          }}
+        >
+          <FontAwesomeIcon color={'gui.seasalt'} icon={faYoutube} />
+        </Button>
+      </Link>
+
+      <Link href="https://www.tiktok.com/@guiopapai" isExternal>
+        <Button
+          bgColor={'gui.maisblack'}
+          w={'48px'}
+          h={'48px'}
+          top={36}
+          left={2}
+          zIndex={1}
+          _hover={{
+            bg: 'gui.maisblack',
+            borderColor: 'gui.meioblack',
+            borderWidth: '1px',
+          }}
+        >
+          <FontAwesomeIcon color={'gui.seasalt'} icon={faTiktok} />
+        </Button>
+      </Link>
+      
+      <Link href="https://twitch.com/guiopapai" isExternal>
+        <Button
+          bgColor={'rgb(145, 70, 255)'}
+          w={'48px'}
+          h={'48px'}
+          top={40}
+          left={2}
+          zIndex={1}
+          _hover={{
+            borderColor: 'gui.meioblack',
+            borderWidth: '1px',
+          }}
+        >
+          <FontAwesomeIcon color={'white'} icon={faTwitch} />
+        </Button>
+      </Link>
+
         <ScrollingText text='APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | APEX MOVEMENT | ' />
 
       </Box>
@@ -112,7 +205,7 @@ const Sidebar = ({ isOpen, setIsOpen, isMobile }) => {
               setIsOpen={setIsOpen}
               isMobile={isMobile}
             />
-))}
+          ))}
         </Accordion>
       </Box>
     </Flex>
