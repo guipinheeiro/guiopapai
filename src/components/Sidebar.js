@@ -20,9 +20,9 @@ const menuItems = [
     title: 'Fundamentos',
     isAccordion: true,
     children: [
-      // { title: 'Configurando', path: '/configurando' },
+      { title: 'Configurando', path: '/configurando' },
+      { title: 'R5Reloaded', path: '/r5reloaded' },
       { title: 'ETD', path: '/etd' },
-      // { title: 'R5Reloaded', path: '/r5reloaded' },
       // { title: 'Posicionamento', path: '/posicionamento' },
       // { title: 'Strafe', path: '/strafe' },
     ],

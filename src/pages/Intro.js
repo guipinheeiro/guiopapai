@@ -29,8 +29,8 @@ const Intro = () => {
         <VideoPlayer url="https://www.youtube.com/watch?v=2lYX2GwTKVg" />
       </Box>
 
-      <Text>
-        Então, prepare-se, aqueça o scroll do mouse e o <Kbd>W</Kbd>  <Kbd>A</Kbd> <Kbd>S</Kbd> <Kbd>D</Kbd>, porque aqui se inicia uma nova aventura! Vem comigo, Nerdola, e vamos conquistar juntos clipes o suficiente para fazermos um filme de grandes jogadas no Apex! 🎮🚀
+      <Text >
+        Então, prepare-se, aqueça o scroll do mouse e o <Text color={'gui.seasalt'} as={'span'}><Kbd backgroundColor={'gui.raisinblack'}>W</Kbd> <Kbd backgroundColor={'gui.raisinblack'}>A</Kbd> <Kbd backgroundColor={'gui.raisinblack'}>S</Kbd> <Kbd backgroundColor={'gui.raisinblack'}>D</Kbd></Text>, porque aqui se inicia uma nova aventura! Vem comigo, Nerdola, e vamos conquistar juntos clipes o suficiente para fazermos um filme de grandes jogadas no Apex! 🎮🚀
       </Text>
 
       <Text>Tá esperando o quê? Bora lá! 🏃‍♂️💨</Text>

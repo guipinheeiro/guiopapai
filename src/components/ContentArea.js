@@ -7,6 +7,7 @@ import Home from '../pages/Home';
 import ETD from '../pages/fundamentos/ETD';
 import { Routes, Route } from 'react-router-dom';
 import Intro from '../pages/Intro';
+import R5Reloaded from '../pages/fundamentos/R5Reloaded';
 
 const ContentArea = ({ isOpen }) => {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
@@ -28,6 +29,7 @@ const ContentArea = ({ isOpen }) => {
           <Route path="/" element={<Home />} />
           <Route path="/intro" element={<Intro />} />
           <Route path="/etd" element={<ETD />} />
+          <Route path="/r5reloaded" element={<R5Reloaded/>} />
           {/* Add more routes here as needed */}
         </Routes>
       </Box>
