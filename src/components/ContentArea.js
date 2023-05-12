@@ -4,10 +4,12 @@ import { Box, useMediaQuery, Center } from '@chakra-ui/react';
 
 //ROUTES DE CONTEÚDO
 import Home from '../pages/Home';
-import ETD from '../pages/fundamentos/ETD';
+import EDD from '../pages/fundamentos/EDD';
 import { Routes, Route } from 'react-router-dom';
 import Intro from '../pages/Intro';
 import R5Reloaded from '../pages/fundamentos/R5Reloaded';
+import Cover from '../pages/fundamentos/Cover';
+import Posicionamento from '../pages/fundamentos/Posicionamento';
 
 const ContentArea = ({ isOpen }) => {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
@@ -28,7 +30,9 @@ const ContentArea = ({ isOpen }) => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/intro" element={<Intro />} />
-          <Route path="/etd" element={<ETD />} />
+          <Route path="/edd" element={<EDD />} />
+          <Route path="/posicionamento" element={<Posicionamento />} />
+          <Route path="/cover" element={<Cover />} />
           <Route path="/r5reloaded" element={<R5Reloaded/>} />
           {/* Add more routes here as needed */}
         </Routes>

@@ -22,8 +22,10 @@ const menuItems = [
     children: [
       { title: 'Configurando', path: '/configurando' },
       { title: 'R5Reloaded', path: '/r5reloaded' },
-      { title: 'ETD', path: '/etd' },
-      // { title: 'Posicionamento', path: '/posicionamento' },
+      { title: 'EDD', path: '/edd' },
+      { title: 'Cover', path: '/cover' },
+      { title: 'Posicionamento', path: '/posicionamento' },
+
       // { title: 'Strafe', path: '/strafe' },
     ],
   },
