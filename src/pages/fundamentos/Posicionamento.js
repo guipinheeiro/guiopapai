@@ -32,7 +32,7 @@ const Posicionamento = () => {
       <Text>Lembre-se, mesmo que seja um jogo, a batalha ainda é uma questão de vida ou morte - virtual, é claro. Então, posicione-se com sabedoria, monitore o output e o input de dano, e aproveite os momentos certos para atacar. A vitória estará ao seu alcance.</Text>
       
       <Center>
-        <VideoPlayer url="https://www.youtube.com/watch?v=bEG1ma1ykok" />
+        <VideoPlayer url="https://www.youtube.com/watch?v=bEG1ma1ykok" controle />
         
       </Center>
       <Center>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import { Checkbox, Box, Center } from '@chakra-ui/react';
 
-const VideoPlayer = ({ url, autoPlay, mudo }) => {
+const VideoPlayer = ({ url, autoPlay, mudo, controle }) => {
 const [isMuted, setIsMuted] = useState(mudo ? true : false); // default to muted
  
   const handleMuteToggle = () => {
@@ -26,6 +26,7 @@ const [isMuted, setIsMuted] = useState(mudo ? true : false); // default to muted
           volume={isMuted ? 0 : 0.5}
           width="100%"
           height="100%"
+          controls={controle}
           style={{
             position: 'absolute',
             top: 0,
