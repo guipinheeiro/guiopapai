@@ -4,6 +4,7 @@ import {
   Box,
   Kbd,
   Text,
+  Center
 } from '@chakra-ui/react';
 import VideoPlayer from '../components/VideoPlayer';
 
@@ -25,9 +26,12 @@ const Intro = () => {
         E fique tranquilo, <Text as={'span'} fontWeight={'bold'}>não vamos só falar</Text> – teremos vídeos, gifs e imagens ilustrando cada movimento, situações onde aplicá-los e clipes de gameplay onde eles foram úteis, para que você aprenda de forma didática e divertida. 😜
       </Text>
 
-      <Box width="100%" maxW="1280px" borderRadius={16}>
-        <VideoPlayer url="https://www.youtube.com/watch?v=2lYX2GwTKVg" />
-      </Box>
+      <Center mt={4}>
+        <VideoPlayer url="https://www.youtube.com/watch?v=2lYX2GwTKVg" controle />
+      </Center>
+      <Center>
+        <Text mt={0} fontSize={'12px'}>Exemplo de movimentação para reposicionar e dar input de dano.</Text>
+      </Center>
 
       <Text >
         Então, prepare-se, aqueça o scroll do mouse e o <Text color={'gui.seasalt'} as={'span'}><Kbd backgroundColor={'gui.raisinblack'}>W</Kbd> <Kbd backgroundColor={'gui.raisinblack'}>A</Kbd> <Kbd backgroundColor={'gui.raisinblack'}>S</Kbd> <Kbd backgroundColor={'gui.raisinblack'}>D</Kbd></Text>, porque aqui se inicia uma nova aventura! Vem comigo, Nerdola, e vamos conquistar juntos clipes o suficiente para fazermos um filme de grandes jogadas no Apex! 🎮🚀

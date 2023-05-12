@@ -13,7 +13,7 @@ const Posicionamento = () => {
   return (
 
     <Box as="main" h="100vh" p={4} color={'gui.seasalt'} textStyle="body" flexDirection="column">
-      <Text textStyle="h0" mb={4}>
+      <Text textStyle="h0" mb={4} wordBreak={'keep-all'}>
         <Text as='span' color={'gui.green'}>Posicionamento</Text> é a prioridade
       </Text>
       <Text textStyle="h2" mb={4}>
@@ -31,7 +31,7 @@ const Posicionamento = () => {
 
       <Text>Lembre-se, mesmo que seja um jogo, a batalha ainda é uma questão de vida ou morte - virtual, é claro. Então, posicione-se com sabedoria, monitore o output e o input de dano, e aproveite os momentos certos para atacar. A vitória estará ao seu alcance.</Text>
       
-      <Center>
+      <Center my={4}>
         <VideoPlayer url="https://www.youtube.com/watch?v=bEG1ma1ykok" controle />
         
       </Center>
