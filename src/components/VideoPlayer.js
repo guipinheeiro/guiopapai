@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import { Checkbox, Box, Center } from '@chakra-ui/react';
 
-const VideoPlayer = ({ url, autoPlay }) => {
-  const [isMuted, setIsMuted] = useState(true); // default to muted
-
+const VideoPlayer = ({ url, autoPlay, mudo }) => {
+const [isMuted, setIsMuted] = useState(mudo ? true : false); // default to muted
+ 
   const handleMuteToggle = () => {
     setIsMuted(!isMuted);
   };
@@ -22,7 +22,7 @@ const VideoPlayer = ({ url, autoPlay }) => {
           url={url}
           playing={autoPlay}
           loop
-          muted={isMuted}
+          muted={mudo ? (isMuted) : ''}
           volume={isMuted ? 0 : 0.5}
           width="100%"
           height="100%"
@@ -33,12 +33,15 @@ const VideoPlayer = ({ url, autoPlay }) => {
           }}
         />
       </Box>
-      <Center>
-        <Checkbox mb={4} isChecked={isMuted} onChange={handleMuteToggle}>
-          Mudo ativado
-        </Checkbox>
-      </Center>
+      {mudo ? (
+        <Center>
+          <Checkbox mb={4} isChecked={isMuted} onChange={handleMuteToggle}>
+            Mudo ativado
+          </Checkbox>
+        </Center>)
+        : '' }
     </Box>
+      
   );
 };
 

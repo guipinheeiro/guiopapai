@@ -19,7 +19,7 @@ const Home = () => {
         Aprenda as técnicas avançadas de movimentação para dominar o <Text as={'span'} fontWeight={'750'} color={'gui.bloodred'}>Apex Legends</Text>.
       </Text>
       <Box width="100%" maxW="1280px" borderRadius={16}>
-        <VideoPlayer url="https://youtu.be/_o8hMZaUrwo" autoPlay />
+        <VideoPlayer url="https://youtu.be/_o8hMZaUrwo" autoPlay mudo />
       </Box>
       <Link to={'./intro'}><Button variant="guiGreen">Aprender agora!</Button></Link>
     </Center>
