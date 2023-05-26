@@ -22,6 +22,7 @@ const menuItems = [
     children: [
       { title: 'Configurando', path: '/configurando' },
       { title: 'R5Reloaded', path: '/r5reloaded' },
+      { title: 'Input / Output de dano', path: '/inputoutput' },
       { title: 'EDD', path: '/edd' },
       { title: 'Cover', path: '/cover' },
       { title: 'Posicionamento', path: '/posicionamento' },

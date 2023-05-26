@@ -10,6 +10,7 @@ import Intro from '../pages/Intro';
 import R5Reloaded from '../pages/fundamentos/R5Reloaded';
 import Cover from '../pages/fundamentos/Cover';
 import Posicionamento from '../pages/fundamentos/Posicionamento';
+import InputOutput from '../pages/fundamentos/InputOutput';
 
 const ContentArea = ({ isOpen }) => {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
@@ -34,6 +35,7 @@ const ContentArea = ({ isOpen }) => {
           <Route path="/posicionamento" element={<Posicionamento />} />
           <Route path="/cover" element={<Cover />} />
           <Route path="/r5reloaded" element={<R5Reloaded/>} />
+          <Route path="/inputoutput" element={<InputOutput/>} />
           {/* Add more routes here as needed */}
         </Routes>
       </Box>

@@ -5,26 +5,19 @@ import {
   UnorderedList,
   ListItem,
   Card,
+  
 } from '@chakra-ui/react';
 // import VideoPlayer from '../../components/VideoPlayer';
 
 
-const EDD = () => {
+const InputOutput = () => {
   return (
 
     <Box as="main" h="100vh" p={4} color={'gui.seasalt'} textStyle="body" flexDirection="column">
       <Text textStyle="h0" mb={4}>
-        <Text as='span' color={'gui.green'}>Evite Danos Desnecessários</Text> no Jogo
+        <Text as='span' color={'gui.purp'}>Input e Output</Text> de dano
       </Text>
-      <Text mb={4}>
-        E aí, galera! Vamos falar sobre como evitar aqueles danos
-        desnecessários no jogo que acabam atrapalhando a nossa performance e,
-        vamos ser sinceros, ninguém quer ser o amigo da equipe que só leva
-        tiro, né? Então cola aqui e confere essas dicas valiosas!
-      </Text>
-      <Text textStyle="h2" mb={4}>
-        <Text as="span" color={'gui.green'}>Input e Output</Text> de dano
-      </Text>
+      
       <Text>É importante ressaltar que um bom desempenho na batalha não se resume apenas à capacidade de atirar bem. Embora o treino de mira seja crucial - e isso é um tópico por si só - vamos assumir, por hora, que você já tem domínio sobre essa habilidade.</Text>
 
       <Text>Agora, o que realmente faz a diferença no campo de batalha é a interação entre output e input de dano, juntamente com um posicionamento estratégico. Quando falamos de "output de dano", estamos nos referindo à quantidade de dano que você é capaz de causar ao inimigo. Já o "input de dano" é o dano que você recebe. <Text as="span" color="gui.green" fontWeight={'600'}>Maximizar o dano que você exerce</Text> e <Text as="span" color="gui.bloodred" fontWeight={'700'}>minimizar o dano que recebe</Text> é a chave para o sucesso.</Text>
@@ -113,4 +106,4 @@ const EDD = () => {
   );
 };
 
-export default EDD;
+export default InputOutput;
